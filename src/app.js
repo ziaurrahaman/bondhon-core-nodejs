@@ -4,7 +4,7 @@ const cors = require("cors");
 const regModule = require("./modules/registration");
 const bgModule = require("./modules/groom_bride_registration");
 const addressModule = require("./modules/address");
-
+const marriageInfoModule = require("./modules/marriage_info");
 // module import
 
 const errorHandler = require("./middlewares/error-handler.middle");
@@ -27,6 +27,7 @@ process.on("uncaughtException", (err) => {
 regModule.init(app);
 bgModule.init(app);
 addressModule.init(app);
+marriageInfoModule.init(app);
 app.use(errorHandler);
 
 app.listen(8081, () => console.log("Server started at port 8081"));

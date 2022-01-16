@@ -50,3 +50,20 @@ CREATE TABLE marriage_info (
     muazzil text not null, 
     create_by text not null, 
     create_date TIMESTAMPTZ not null)
+
+
+    CREATE TABLE marriage_special_info (
+  id serial primary key,
+    mrg_id int NOT NULL,
+    whom text  NOT NULL,
+    mrg_status text NOT NULL,
+    devorce_con text NOT NULL,
+    revoke_per text NOT NULL,
+   alimony_prv text NOT NULL,
+    per_no int NOT NULL,
+    per_date TIMESTAMPTZ NOT NULL,
+    create_by text not null,
+    create_date TIMESTAMPTZ not null
+
+
+)
