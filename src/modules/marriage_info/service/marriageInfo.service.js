@@ -75,7 +75,7 @@ async function createMarriageInfo(
     }
   } catch (error) {
     await client.query("ROLLBACK");
-    throw e;
+    throw error;
   } finally {
     client.release();
   }
